@@ -35,6 +35,7 @@ module "vpc" {
   enable_nat_gateway = true
   enable_vpn_gateway = false
   enable_flow_log = true
+  create_vpc = true
 
   tags = {
     project     = "project-alpha",
