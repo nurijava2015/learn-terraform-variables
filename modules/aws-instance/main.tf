@@ -16,6 +16,9 @@ resource "aws_instance" "app" {
 
   subnet_id              = var.subnet_ids[count.index % length(var.subnet_ids)]
   vpc_security_group_ids = var.security_group_ids
+  metadata_options {
+    http_tokens = "required"
+  }
 
   user_data = <<-EOF
     #!/bin/bash
