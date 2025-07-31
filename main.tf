@@ -34,14 +34,7 @@ module "vpc" {
 
   enable_nat_gateway = true
   enable_vpn_gateway = false
-  # Cloudwatch log group and IAM role will be created
-  enable_flow_log                      = true
-  create_vpc = true
-  create_flow_log_cloudwatch_log_group = true
-  create_flow_log_cloudwatch_iam_role  = true
-
-  flow_log_max_aggregation_interval         = 60
-  flow_log_cloudwatch_log_group_name_prefix = "/aws/my-amazing-vpc-flow-logz/"
+  enable_flow_log = true
   
   vpc_flow_log_tags = {
     project     = "project-alpha",
