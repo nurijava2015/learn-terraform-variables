@@ -36,6 +36,7 @@ module "vpc" {
   enable_vpn_gateway = false
   # Cloudwatch log group and IAM role will be created
   enable_flow_log                      = true
+  create_vpc = true
   create_flow_log_cloudwatch_log_group = true
   create_flow_log_cloudwatch_iam_role  = true
 
